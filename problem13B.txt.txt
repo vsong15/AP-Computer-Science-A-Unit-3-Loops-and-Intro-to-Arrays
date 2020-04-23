@@ -1,0 +1,7 @@
+public static void numCombinations(int n, int r){
+   if(r>n)
+      System.out.println("0");
+   else{
+      System.out.println(factorial(n)/(factorial(r))*factorial(n-r)));
+   }
+}

@@ -1,0 +1,48 @@
+public static boolean isSelfDivisor(int number){
+
+   int test = number;
+   
+   while(test>0){
+   
+      int currDigit = test%10
+      
+      if (currDigit ==0)
+         
+         return false;
+         
+      if (number%currDigit != 0)
+         
+         return false;
+         
+      test/=10;
+
+  }
+  
+  return true;
+  
+}
+
+
+public static int[] firstNumSelfDivisors(int start, int num){
+
+   int[]answer = new int [num];
+   
+   int count = 0;
+   
+   while(count<num){
+   
+    if(isSelfDivisor(start)){
+    
+      answer[count]=start;
+      
+      count++;
+    
+     }
+   
+ start++;
+   
+   }
+   
+ return answer;
+
+}
